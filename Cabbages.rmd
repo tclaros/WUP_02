@@ -19,22 +19,29 @@ veggy <- cabbages
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
  The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
  
-### Is there a difference in average VitC between c39 and c52 cultivation methods?  
-
-# Methods
+### Is there a difference in average VitC between c39 and c52 cultivation methods?    
+$H_0$: There is no difference between the vitamin C content between c39 and c52 cultivation methods.  
+$H_A$: There is a difference between the vitamin C content between C39 and c52 cultivation methods.  
+  
+# Methods  
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
-
+We are explaining how much vitamin C content based on the cultivation method used. We'll use a t-test to compare the mean of the two vitamin c groups.      
+  
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
-## Descriptive Results
+## Descriptive Results    
+```{r}
+boxplot(VitC~Cult,data=veggy)
+```
 
-### Graphical Descriptive Results
+### Graphical Descriptive Results  
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
-
+The category c39 for cultivation cabbages had an overall lower mean for the numerical result of vitamin c. While the C52 category had a higher mean of the vitamin c using their cultivation method.  
+  
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
